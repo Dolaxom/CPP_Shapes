@@ -7,15 +7,15 @@
 
 namespace ts {
 
-    class Square : public Figure {
-    public:
-        Square();
-        void Draw() override;
+class Square : public Figure {
+ public:
+  Square();
+  void Draw() override;
 
-    private:
-        std::vector<float> vertices_;
-    };
+ private:
+  std::vector<float> vertices_;
+};
 
-} // ts
+}  // namespace ts
 
-#endif //TOPSYSTEMS_SQUARE_H
+#endif  // TOPSYSTEMS_SQUARE_H

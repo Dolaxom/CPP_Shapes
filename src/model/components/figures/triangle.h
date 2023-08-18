@@ -8,12 +8,12 @@
 namespace ts {
 
 class Triangle : public Figure {
-public:
-    Triangle();
-    void Draw() override;
+ public:
+  Triangle();
+  void Draw() override;
 
-private:
-    std::vector<float> vertices_;
+ private:
+  std::vector<float> vertices_;
 };
 
 }  // namespace ts

@@ -2,7 +2,7 @@
 
 namespace ts {
 void Model::AddObject(const std::shared_ptr<Figure>& object) {
-//  SetObjectLocation(object);
+  //  SetObjectLocation(object);
   objects_.push_back(object);
 }
 

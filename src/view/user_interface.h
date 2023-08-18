@@ -5,21 +5,22 @@
 #include <imgui.h>
 #include <imgui_impl_glfw.h>
 #include <imgui_impl_opengl3.h>
+
 #include "../controller/controller.h"
 
 namespace ts {
 
 class UserInterface {
-public:
+ public:
   UserInterface();
   void InitImGUI(GLFWwindow* window);
   void DrawImGUI();
   void DestroyImGUI();
   std::vector<std::shared_ptr<Figure>> Data() const noexcept;
 
-private:
-    SpawnInfo spawnInfo{};
-    Controller controller{};
+ private:
+  SpawnInfo spawnInfo{};
+  Controller controller{};
 };
 
 }  // namespace ts

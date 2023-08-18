@@ -1,8 +1,9 @@
 #ifndef TOPSYSTEMS_OBJECT_H
 #define TOPSYSTEMS_OBJECT_H
 
-#include <cstdint>
 #include <GLFW/glfw3.h>
+
+#include <cstdint>
 
 namespace ts {
 

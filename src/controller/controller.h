@@ -6,21 +6,21 @@
 #include "../model/model.h"
 
 namespace ts {
-    struct SpawnInfo {
-        float location[2];
-        float color[3];
-        std::string type;
-    };
+struct SpawnInfo {
+  float location[2];
+  float color[3];
+  std::string type;
+};
 
-    class Controller {
-    public:
-        void Create(const SpawnInfo& spawnInfo);
-        std::vector<std::shared_ptr<Figure>> GetDrawData() const noexcept;
+class Controller {
+ public:
+  void Create(const SpawnInfo& spawnInfo);
+  std::vector<std::shared_ptr<Figure>> GetDrawData() const noexcept;
 
-    private:
-        Model model;
-    };
+ private:
+  Model model;
+};
 
-} // ts
+}  // namespace ts
 
-#endif //TOPSYSTEMS_CONTROLLER_H
+#endif  // TOPSYSTEMS_CONTROLLER_H
