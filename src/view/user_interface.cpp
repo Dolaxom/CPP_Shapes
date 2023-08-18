@@ -67,7 +67,7 @@ void UserInterface::DrawImGUI() {
     controller.Create(spawnInfo);
   }
 
-  ImGui::Text("\n*No restrictions on drawing shapes\nin the same place.");
+  ImGui::Text("\n*You CAN MOVE around the map\nusing the ARROWS on the KEYBOARD.");
 
   ImGui::End();
 
