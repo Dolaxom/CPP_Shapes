@@ -2,6 +2,7 @@
 #define TOPSYSTEMS_WINDOW_H
 
 #include "../model/components/grid.h"
+#include "../model/input_controller.h"
 #include "user_interface.h"
 
 namespace ts {
@@ -16,6 +17,7 @@ class Window {
   ts::UserInterface userInterface_;
   ts::Grid grid_;
   GLFWwindow *window_;
+  InputController inputController_;
 
   float cameraX_ = 0.0f;
   float cameraY_ = 0.0f;

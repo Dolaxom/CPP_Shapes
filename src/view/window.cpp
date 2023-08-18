@@ -2,11 +2,10 @@
 
 #include <stdexcept>
 
-#include "../model/input_controller.h"
-
 namespace ts {
 
-Window::Window() : grid_{20, 20, 0.25f}, window_{nullptr} {}
+Window::Window()
+    : grid_{20, 20, 0.25f}, window_{nullptr}, inputController_{0.01f} {}
 
 void Window::Create() {
   InitAll();
@@ -31,7 +30,7 @@ void Window::MainLoop() {
 
     SetProjection(width, height);
 
-    InputController::Movement(window_, cameraX_, cameraY_, 5.0f);
+    inputController_.Movement(window_, cameraX_, cameraY_, 5.0f);
 
     Draw();
   }

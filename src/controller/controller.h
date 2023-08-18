@@ -14,7 +14,7 @@ struct SpawnInfo {
 
 class Controller {
  public:
-  void Create(const SpawnInfo& spawnInfo);
+  void Create(SpawnInfo& spawnInfo);
   std::vector<std::shared_ptr<Figure>> GetDrawData() const noexcept;
 
  private:

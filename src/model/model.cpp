@@ -14,15 +14,9 @@ std::vector<std::shared_ptr<Figure>> Model::GetObjects() const noexcept {
   return objects_;
 }
 
-bool Model::CheckCollision(const float* location) const noexcept {
-  for (const auto& it : objects_) {
-    if (location[0] == it->GetLocation()[0] ||
-        location[1] == it->GetLocation()[1]) {
-      return false;
-    }
-  }
-
-  return true;
+void Model::Clamp(float& value, float min, float max) {
+  if (value > max) value = max;
+  if (value < min) value = min;
 }
 
 }  // namespace ts

@@ -5,7 +5,7 @@
 #include "../model/components/figures/triangle.h"
 
 namespace ts {
-void Controller::Create(const SpawnInfo& spawnInfo) {
+void Controller::Create(SpawnInfo& spawnInfo) {
   std::shared_ptr<Figure> obj;
 
   if (spawnInfo.type == "Triangle") {
@@ -15,6 +15,10 @@ void Controller::Create(const SpawnInfo& spawnInfo) {
   } else if (spawnInfo.type == "Circle") {
     obj = std::make_shared<Circle>();
   }
+
+  model.Clamp(spawnInfo.color[0], 0.0f, 1.0f);
+  model.Clamp(spawnInfo.color[1], 0.0f, 1.0f);
+  model.Clamp(spawnInfo.color[2], 0.0f, 1.0f);
 
   obj->SetColor(spawnInfo.color[0], spawnInfo.color[1], spawnInfo.color[2]);
   obj->SetLocation(spawnInfo.location[0], spawnInfo.location[1]);

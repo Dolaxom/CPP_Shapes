@@ -14,7 +14,7 @@ class Model {
   void AddObject(const std::shared_ptr<Figure>& object);
   std::vector<std::shared_ptr<Figure>> GetObjects() const noexcept;
 
-  bool CheckCollision(const float* location) const noexcept;
+  void Clamp(float& value, float min, float max);
 
  private:
   std::vector<std::shared_ptr<Figure>> objects_;
