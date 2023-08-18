@@ -12,11 +12,15 @@ class Object {
   uint32_t GetID() const noexcept;
   virtual void Draw() = 0;
 
+  void SetVisible(bool v) noexcept;
+  bool GetVisible() const noexcept;
+
  protected:
   Object();
 
  private:
   uint32_t id_;
+  bool isVisible_;
 };
 
 }  // namespace ts

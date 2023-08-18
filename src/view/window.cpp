@@ -45,7 +45,7 @@ void Window::DestroyAll() {
 void Window::Draw() {
   grid_.Draw();
   for (const auto &it : userInterface_.Data()) {
-    it->Draw();
+    if (it->GetVisible()) it->Draw();
   }
   userInterface_.DrawImGUI();
 
