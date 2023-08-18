@@ -78,7 +78,7 @@ void Window::InitFrame(GLFWwindow *window, int &width, int &height) const {
   glfwGetFramebufferSize(window, &width, &height);
   glViewport(0, 0, width, height);
   glClear(GL_COLOR_BUFFER_BIT);
-  glClearColor(0.1, 0.1, 0.1, 1.0);
+  glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 }
 
 void Window::SetProjection(int width, int height) const {
